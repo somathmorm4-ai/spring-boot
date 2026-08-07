@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API</title>
+  </head>
+  <body>
+    <h1>Cashier Management</h1>
+    <form id="cashierForm">
+      <input placeholder="Full Name" type="text" id="fullname" value="" />
+      <input placeholder="Phone" type="text" id="phone" />
+      <input placeholder="Username" type="text" id="username" />
+
+      <button type="submit">Create</button>
+    </form>
+    <ul id="cashiers"></ul>
+  </body>
+
+  <script>
+    let cashier = document.getElementById("cashiers");
+
+    async function FetchAPI() {
+      try {
+        const res = await fetch("http://localhost:8080/api/cashier");
+        const data = await res.json();
+
+        console.log(data);
+
+        cashier.innerHTML = data
+          .map(
+            (item) => `<li>${item.id} - ${item.phone} - ${item.username}</li>`,
+          )
+          .join("");
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    // Call the function when the page loads
+    FetchAPI();
+
+    document
+      .getElementById("cashierForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let fullname = document.getElementById("fullname").value;
+        let phone = document.getElementById("phone").value;
+        let username = document.getElementById("username").value;
+
+        //console.log(fullname, phone, username);
+
+        create(fullname, phone, username);
+      });
+    async function create(fullname, phone, username) {
+      try {
+        const res = await fetch("http://localhost:3306/api/cashier", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ fullname, phone, username }),
+        });
+
+        const response = await res.json();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  </script>
+</html>
