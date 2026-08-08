@@ -2,13 +2,12 @@ package com.example.pos_sys.models;
 
 import java.math.BigDecimal;
 
-import jakarta.persistence.Id;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.Data;
@@ -25,8 +24,8 @@ public class Product {
     private Long id;
 
 
-    @Column(name = "productName",nullable = false,length = 100)
-    private String productName;
+    @Column(name = "product_name",nullable = false,length = 100)
+    private String product_name;
 
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
