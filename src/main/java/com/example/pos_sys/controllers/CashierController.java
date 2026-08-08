@@ -20,15 +20,9 @@ end point
 */
 
 
-@Tag(name = "Cashier API")
 @RestController
 @RequestMapping("/api/cashier")
-
-
-
-
-
- 
+@Tag(name = "Cashier API")
 public class CashierController {
 
     public final JdbcTemplate jdbcTemplate;
