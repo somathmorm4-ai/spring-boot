@@ -11,50 +11,7 @@
 @REM    http://www.apache.org/licenses/LICENSE-2.0
 @REM
 @REM Unless required by applicable
-Acer@DESKTOP-ENPATGF MINGW64 ~/Documents/spring_boot_ETEC/pos_sys/pos_sys
-$ ./mvnw spring-boot:run
-[INFO] Scanning for projects...
-[INFO] 
-[INFO] ------------------------< com.example:pos_sys >-------------------------
-[INFO] Building POS System 0.0.1-SNAPSHOT
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] >>> spring-boot:3.5.5:run (default-cli) > test-compile @ pos_sys >>>
-[INFO] 
-[INFO] --- resources:3.3.1:resources (default-resources) @ pos_sys ---
-[INFO] Copying 1 resource from src\main\resources to target\classes
-[INFO] Copying 0 resource from src\main\resources to target\classes
-[INFO] 
-[INFO] --- compiler:3.14.0:compile (default-compile) @ pos_sys ---
-[INFO] Nothing to compile - all classes are up to date.
-[INFO] 
-[INFO] --- resources:3.3.1:testResources (default-testResources) @ pos_sys ---
-[INFO] skip non existing resourceDirectory C:\Users\Acer\Documents\spring_boot_ETEC\pos_sys\pos_sys\src\test\resources
-[INFO] 
-[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ pos_sys ---
-[INFO] Nothing to compile - all classes are up to date.
-[INFO] 
-[INFO] <<< spring-boot:3.5.5:run (default-cli) < test-compile @ pos_sys <<<
-[INFO] 
-[INFO] 
-[INFO] --- spring-boot:3.5.5:run (default-cli) @ pos_sys ---
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  10.493 s
-[INFO] Finished at: 2026-08-07T09:29:24+07:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.5.5:run (default-cli) on project pos_sys: Execution default-cli of goal org.springframework.boot:spring-boot-maven-plugin:3.5.5:run failed: Unable to find a single main class from the following candidates [com.example.pos_sys.PosSysApplication, com.example.pos_sys.repositories.PosSysApplication] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
-
-Acer@DESKTOP-ENPATGF MINGW64 ~/Documents/spring_boot_ETEC/pos_sys/pos_sys
-$  law or agreed to in writing,
+@REM applicable law or agreed to in writing,
 @REM software distributed under the License is distributed on an
 @REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 @REM KIND, either express or implied.  See the License for the
